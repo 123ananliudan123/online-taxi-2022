@@ -1,2 +1,5 @@
-com\mashibing\apipassenger\controller\TestController.class
 com\mashibing\apipassenger\ApiPassengerApplication.class
+com\mashibing\apipassenger\service\VertificationCodeService.class
+com\mashibing\apipassenger\controller\TestController.class
+com\mashibing\apipassenger\request\VertificationCodeDTO.class
+com\mashibing\apipassenger\controller\VerificationCodeController.class

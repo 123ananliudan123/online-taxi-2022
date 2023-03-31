@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @GetMapping("/test123")
+    @GetMapping("/test")
     public String test(){
         return "test api passenger ! ! ! 112233";
     }

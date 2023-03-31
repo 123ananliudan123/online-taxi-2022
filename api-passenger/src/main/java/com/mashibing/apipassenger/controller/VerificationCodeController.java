@@ -18,7 +18,7 @@ public class VerificationCodeController {
         String passengerPhone = vertificationCodeDTO.getPassengerPhone();
         System.out.println("接收到的手机号参数为："+passengerPhone);
 
-        // 接下来要调用（service中）生成验证码的方法
+        // 接下来要调用（service中的）生成验证码的方法
         return vertificationCodeService.generatorCode(passengerPhone);
 
     }

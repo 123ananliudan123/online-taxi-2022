@@ -1,3 +1,11 @@
 server:
   # 默认是8080
   port: 8081
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: api-passenger
