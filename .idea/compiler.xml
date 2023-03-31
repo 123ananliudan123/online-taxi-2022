@@ -9,18 +9,21 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-passenger" />
         <module name="api-driver" />
+        <module name="service-veritificationcode" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="api-driver" target="1.8" />
       <module name="api-passenger" target="1.8" />
-      <module name="online-taxi-public" target="1.8" />
+      <module name="online-taxi-2022" target="1.8" />
+      <module name="service-veritificationcode" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-driver" options="-parameters" />
       <module name="api-passenger" options="-parameters" />
+      <module name="service-veritificationcode" options="-parameters" />
     </option>
   </component>
 </project>
