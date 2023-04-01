@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/api-driver/api-driver.iml" filepath="$PROJECT_DIR$/api-driver/api-driver.iml" />
       <module fileurl="file://$PROJECT_DIR$/api-passenger/api-passenger.iml" filepath="$PROJECT_DIR$/api-passenger/api-passenger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/internal-common/internal-common.iml" filepath="$PROJECT_DIR$/internal-common/internal-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/online-taxi-2022.iml" filepath="$PROJECT_DIR$/online-taxi-2022.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-veritificationcode/service-veritificationcode.iml" filepath="$PROJECT_DIR$/service-veritificationcode/service-veritificationcode.iml" />
     </modules>
