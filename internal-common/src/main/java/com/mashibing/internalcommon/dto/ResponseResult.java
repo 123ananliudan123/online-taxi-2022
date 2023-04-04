@@ -19,7 +19,7 @@ public class ResponseResult<T> {
     private T data;
 
     /**
-     * 成功相应的方法
+     * 成功响应的方法
      * @param data
      * @param <T>
      * @return
