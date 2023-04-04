@@ -18,6 +18,16 @@ public class ResponseResult<T> {
     private String message;
     private T data;
 
+
+    /**
+     * 成功响应的方法  ——  默认值，什么都没有
+     * @param <T>
+     * @return
+     */
+    public static <T> ResponseResult success(){
+        return new ResponseResult().setCode(CommonStatusEnum.SUCCESS.getCode()).setMessage(CommonStatusEnum.SUCCESS.getValue());
+    }
+
     /**
      * 成功响应的方法
      * @param data
