@@ -2,4 +2,5 @@ D:\zhoulz\java\code-2\zhou\zz\online-taxi-2022\api-passenger\src\main\java\com\m
 D:\zhoulz\java\code-2\zhou\zz\online-taxi-2022\api-passenger\src\main\java\com\mashibing\apipassenger\service\VertificationCodeService.java
 D:\zhoulz\java\code-2\zhou\zz\online-taxi-2022\api-passenger\src\main\java\com\mashibing\apipassenger\request\VertificationCodeDTO.java
 D:\zhoulz\java\code-2\zhou\zz\online-taxi-2022\api-passenger\src\main\java\com\mashibing\apipassenger\ApiPassengerApplication.java
+D:\zhoulz\java\code-2\zhou\zz\online-taxi-2022\api-passenger\src\main\java\com\mashibing\apipassenger\remote\ServiceVerificationcodeClient.java
 D:\zhoulz\java\code-2\zhou\zz\online-taxi-2022\api-passenger\src\main\java\com\mashibing\apipassenger\controller\VerificationCodeController.java

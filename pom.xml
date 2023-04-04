@@ -23,7 +23,6 @@
     <packaging>pom</packaging>
 
 
-
     <dependencies>
         <dependency>
             <!--json-->
@@ -45,22 +44,48 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>-->
 
-
-
     </dependencies>
 
 
 
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2021.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>2020.0.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
 
 
 
-    <repositories>
+
+
+
+
+    <!--不用也行！！！-->
+
+    <!--<repositories>
         <repository>
             <id>alimaven</id>
             <name>Maven Aliyun Mirror</name>
-            <!--<url>http://maven.aliyun.com/nexus/content/repositories/central/</url>-->
+            &lt;!&ndash;<url>http://maven.aliyun.com/nexus/content/repositories/central/</url>&ndash;&gt;
             <url>https://maven.aliyun.com/repository/public</url>
-           <!-- <url>https://repo.maven.apache.org/maven2/</url>-->
+           &lt;!&ndash; <url>https://repo.maven.apache.org/maven2/</url>&ndash;&gt;
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -68,6 +93,6 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
-    </repositories>
+    </repositories>-->
 
 </project>
