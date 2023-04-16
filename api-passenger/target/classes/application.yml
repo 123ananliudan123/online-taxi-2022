@@ -9,3 +9,15 @@ spring:
         server-addr: 127.0.0.1:8848
   application:
     name: api-passenger
+
+# 下面的redis不配置也可以
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include: '*'
