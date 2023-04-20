@@ -1,9 +1,9 @@
 package com.mashibing.apipassenger.controller;
 
-
 import com.mashibing.apipassenger.request.VertificationCodeDTO;
 import com.mashibing.apipassenger.service.VertificationCodeService;
 import com.mashibing.internalcommon.dto.ResponseResult;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class VerificationCodeController {
 
+    @Autowired
     private VertificationCodeService vertificationCodeService;
 
     @GetMapping("/vertification-code")
@@ -21,9 +22,6 @@ public class VerificationCodeController {
 
         // 接下来要调用（service中的）生成验证码的方法
         return vertificationCodeService.generatorCode(passengerPhone);
-
     }
-
-
 
 }
