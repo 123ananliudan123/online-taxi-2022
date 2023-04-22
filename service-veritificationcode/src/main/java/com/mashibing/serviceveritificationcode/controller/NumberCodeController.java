@@ -45,18 +45,17 @@ public class NumberCodeController {
         System.out.println("generator src code:"+resultInt);
 
         /*
-        * 因为：该生成验证码的方法numberCode()的返回值为string。这样的话，每次生成
+        * 因为：该生成验证码的方法numberCode()的返回值为String。这样的话，每次生成
         * 验证码的步骤都比较繁琐，不方便，如29-34行.
         *
         * 解决：统一将返回值进行包装。
         *
         * 下面写法的思路：
-        * 1、先定义了一个公共模块internal-common：
+        * 先定义了一个公共模块internal-common：
         *      1）在常量包constant先定义错误/成功类型 —— 通过枚举的方式
-        *      2) 继续优化冗的写法(json的方式)。在dto包下 —— 包装统一的返回值，包含code、message、data信息
+        *      2) 继续优化原来冗余的写法(json的方式)。在dto包下 —— 包装统一的返回值，包含code、message、data信息
         *         在里面自定义成功和失败的响应方法
         *      3）再定义一个java对象，里面放生成的验证码的值。即上面生成的resultInt。
-        *
         * */
 
         // 定义返回值

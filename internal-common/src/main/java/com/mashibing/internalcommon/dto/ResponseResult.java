@@ -18,7 +18,6 @@ public class ResponseResult<T> {
     private String message;
     private T data;
 
-
     /**
      * 成功响应的方法  ——  默认值，什么都没有
      * @param <T>
@@ -71,6 +70,5 @@ public class ResponseResult<T> {
     public static ResponseResult fail(int code,String message,String data){
         return new ResponseResult().setCode(code).setMessage(message).setData(data);
     }
-
 
 }

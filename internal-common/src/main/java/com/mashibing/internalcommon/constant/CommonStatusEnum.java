@@ -19,7 +19,6 @@ public enum CommonStatusEnum {
      */
     FAIL(0,"fail")
 
-
     ;
 
     @Getter

@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @GetMapping("/test222")
+    @GetMapping("/test")
     public String test(){
-        return "service-verificationcode";
+        return "service-verificationcode ！！！";
     }
 }
