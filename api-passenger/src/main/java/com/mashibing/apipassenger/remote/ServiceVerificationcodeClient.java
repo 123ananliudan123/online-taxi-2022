@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @Description: com.mashibing.apipassenger.remote
  * @Date: 2023/4/4 - 04 - 04 - 13:46
  */
-@FeignClient("service-verificationcode")
+
+@FeignClient("service-veritificationcode")
 public interface ServiceVerificationcodeClient {
 
     /*@RequestMapping(method = RequestMethod.GET , value = "/numberCode/6")
     ResponseResult<NumberCodeResponse> getNumberCode();*/
 
     // 上面写死了
-
     @RequestMapping(method = RequestMethod.GET , value = "/numberCode/{size}")
     ResponseResult<NumberCodeResponse> getNumberCode(@PathVariable("size") int size);
-
 }
+

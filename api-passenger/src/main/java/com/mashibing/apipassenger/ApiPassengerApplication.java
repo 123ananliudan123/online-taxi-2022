@@ -13,7 +13,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients //远程调用
 public class ApiPassengerApplication {
     public static void main(String[] args) {
         SpringApplication.run(ApiPassengerApplication.class);

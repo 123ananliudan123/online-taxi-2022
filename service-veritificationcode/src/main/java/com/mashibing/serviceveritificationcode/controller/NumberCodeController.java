@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class NumberCodeController {
 
     @GetMapping("/numberCode/{size}")
-
     public ResponseResult numberCode(@PathVariable("size") int size){
     /*public String numberCode(@PathVariable("size") int size){
         System.out.println("size:"+size);
@@ -42,7 +41,7 @@ public class NumberCodeController {
         double mathRandom = (Math.random()*9 +1 ) * (Math.pow(10,size-1));
         System.out.println(mathRandom);
         int resultInt = (int)mathRandom;
-        System.out.println("generator src code:"+resultInt);
+        System.out.println("generator src code : "+resultInt);
 
         /*
         * 因为：该生成验证码的方法numberCode()的返回值为String。这样的话，每次生成
@@ -64,5 +63,4 @@ public class NumberCodeController {
 
         return ResponseResult.success(response);
     }
-
 }
