@@ -27,21 +27,21 @@ public class VertificationCodeService {
     private ServiceVerificationcodeClient serviceVerificationcodeClient;
 
     // 乘客验证码的前缀
-    //private String verificationCodePrefix = "passenger-verification-code-";
+    private String verificationCodePrefix = "passenger-verification-code-";
 
     //操作redis的方式
-    //@Autowired
-    //private StringRedisTemplate stringRedisTemplate;
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
-    //public ResponseResult generatorCode(String passengerPhone){
-    public String generatorCode(String passengerPhone){
+    public ResponseResult generatorCode(String passengerPhone){
+    //public String generatorCode(String passengerPhone){
 
         // 1、调用验证码服务，获取验证码
         System.out.println("调用验证码服务，获取验证码！");
         //String code = "111";
 
         // 调用验证码服务 —— 具体操作：
-        ResponseResult<NumberCodeResponse> numberCodeResponse = serviceVerificationcodeClient.getNumberCode(5);
+        ResponseResult<NumberCodeResponse> numberCodeResponse = serviceVerificationcodeClient.getNumberCode(6);
         int numberCode = numberCodeResponse.getData().getNumberCode();
 
         System.out.println("remote number code : " +  numberCode);
@@ -50,30 +50,29 @@ public class VertificationCodeService {
         System.out.println("存入redis");
 
         // 存入redis - 具体实现：
-
-        // key,value,过期时间
-
+        // key,value,过期时间ttl
         // key
-        //String key = verificationCodePrefix + passengerPhone;
-        // value 即使验证码，即上面的numberCode
+        String key = verificationCodePrefix + passengerPhone;
+        // value 就是验证码，即上面的numberCode
         // 过期时间定为两分钟
 
         // 存入redis
-        //stringRedisTemplate.opsForValue().set(key,numberCode + "",2, TimeUnit.MINUTES);
+        stringRedisTemplate.opsForValue().set(key,numberCode + "",2, TimeUnit.MINUTES);
 
         ///3、返回值
-        JSONObject result = new JSONObject();
+        /*JSONObject result = new JSONObject();
         result.put("code",1);
         result.put("message","success");
 
-        return result.toString();
+        return result.toString();*/
 
         // 返回值
         // 将上面返回值的类型改为 ResponseResult  —— 参考模块service-veritificationcode下，controller包下的NumberCodeController类
-        //return ResponseResult.success("");
+        //return ResponseResult.success();
+        return ResponseResult.success("");
 
         // 4、通过短信服务，将对应的验证码发到手机上   ——  后面再实现
-        //  借助 ： 阿里短信服务、腾讯短信通、华信、容联
+        //  借助 ： 阿里短信服务、腾讯短信通、华信、容联  —— 需要收费
 
     }
 
