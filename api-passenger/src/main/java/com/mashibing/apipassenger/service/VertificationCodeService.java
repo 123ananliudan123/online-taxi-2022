@@ -33,6 +33,11 @@ public class VertificationCodeService {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
+    /**
+     * 生成验证码
+     * @param passengerPhone 乘客手机号
+     * @return
+     */
     public ResponseResult generatorCode(String passengerPhone){
     //public String generatorCode(String passengerPhone){
 
@@ -69,11 +74,24 @@ public class VertificationCodeService {
         // 返回值
         // 将上面返回值的类型改为 ResponseResult  —— 参考模块service-veritificationcode下，controller包下的NumberCodeController类
         //return ResponseResult.success();
-        return ResponseResult.success("");
 
         // 4、通过短信服务，将对应的验证码发到手机上   ——  后面再实现
         //  借助 ： 阿里短信服务、腾讯短信通、华信、容联  —— 需要收费
-
+        return ResponseResult.success("");
     }
+
+
+    /**
+     * 校验验证码
+     * @param passengerPhone 手机号
+     * @param verificationCode 验证码
+     * @return
+     */
+    public ResponseResult checkCode(String passengerPhone,String verificationCode){
+
+
+        return null;
+    }
+
 
 }
