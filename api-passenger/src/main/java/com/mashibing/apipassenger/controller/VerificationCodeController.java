@@ -36,7 +36,8 @@ public class VerificationCodeController {
         // 校验服务端能不能正确收到手机号和验证码
         System.out.println("手机号："+passengerPhone + ",验证码："+verificationCode);
 
-        return null;
+        //return null;
+        return vertificationCodeService.checkCode(passengerPhone,verificationCode);
     }
 
 
