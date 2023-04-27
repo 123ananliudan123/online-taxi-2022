@@ -126,7 +126,6 @@ public class VertificationCodeService {
             return ResponseResult.fail(CommonStatusEnum.VERIFICATION_CODE_ERROR.getCode(),CommonStatusEnum.VERIFICATION_CODE_ERROR.getValue());
         }
 
-
         // 3、判断原来是否有用户，并进行对应的处理
         System.out.println("3、判断原来是否有用户，并进行对应的处理");
 
